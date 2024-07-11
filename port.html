@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="port.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+ 
+   
+</head>
+
+<body>
+
+    <!-- home page -->
+    <div id="header">
+        <div data-aos="fade-right" class="container">
+            <nav>
+                <h1 class="logo"><span>M</span>anoj</h1>
+                
+               
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text" >
+                <h1>Web Developer</h1>
+                <p> Hi , I'M <span>Manoj Kumar</span> <br> From Tirupur <br> Tamil Nadu</p>
+            </div>
+            <div class="proimg">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About page -->
+
+    <div id="about">
+        <div class="row">
+            <div class="col-1">
+                <img src="images/MERN (1).png " alt="">
+            </div>
+            <div class="col-2">
+                <h1 class="sub-tittle">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellat similique nobis iusto
+                    illo eos,
+                    soluta consequatur fugit dolorem quae dignissimos accusamus maiores quos doloremque dolore ducimus,
+                    facilis
+                    debitis blanditiis.</p>
+
+                <div class="tab">
+                    <p class="tab-links  active-link" id="skill1">Skill</p>
+                    <p class="tab-links active-link" id="exp">Experience</p>
+                    <p class="tab-links active-link" id="eadu">Education</p>
+                </div>
+
+                <div class="skills tabs  activetab" id="Skills">
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Bootstrap</li>
+                        <li>JavaScript</li>
+                        <li>MangoDB</li>
+                        <br>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>Express</li>
+                    </ul>
+
+                </div>
+                <div class="Experience  tabs" id="experience">
+                    <p>I complete <span>Full Stack Web Development</span> course complete then   <br>
+                        the I create food delivery website </p>
+                </div>
+                <div class="Education tabs" id="education">
+                    <div class="college">
+                        <p>Parks College College Arts and Science Tirupur</p>
+                        <span>BBA(Computer Application)</span>
+                    </div>
+                    <div class="highschool college">
+                        <p>K.S.C Government Higher Secoundary School Tirupur</p>
+                        <span>Percentage.58%</span>
+
+                    </div>
+                    <div class="school college">
+                        <p>Government High School Segampalayam</p>
+                        <span>Percentage.60.1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- my project -->
+
+            <div class="container2" id="work">
+                <div class="myproject">
+                    <h1 class="sub-tittle">My Recend project</h1>
+
+                  <div class="own">
+                    <div class="prj box1" >
+                        <img src="Screenshot (4).png" alt="">
+                        <p>I Create a Movie Website Using HTML  CSS  JAVASCRIPT </p>
+                        <a href="https://manojkumar323.github.io/kollywwod/" target="_blank">Visit Site</a>
+                    </div>
+                    <div class="prj box2">
+                        <img src="Screenshot (5).png" alt="">
+                        <p>Dgital clock in JavaScript   </p>
+                        <a href="http://127.0.0.1:5501/dgital%20clock.html" target="_blank">Visit Site</a>
+                    </div>
+                    <div class="prj box3">
+                        <img src="" alt="">
+                        <a href=""></a>
+                    </div>
+                    <div class="prj box4">
+                        <img src="" alt="">
+                        <a href=""></a>
+                    </div>
+                    <div class="prj box5">
+                        <img src="" alt="">
+                        <a href=""></a>
+                    </div>
+                    <div class="prj box6">
+                        <img src="" alt="">
+                        <a href=""></a>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+
+            <div class="contact" id="contacts">
+                <h1 class="sub-tittle">Contact</h1>
+                <div class="C-deatails">
+                 <div class="num">
+                    <a href=""><i class="fa-regular fa-paper-plane"></i>Manojkumar850876@gmail.com</a>
+                    <a href=""><i class="fa-solid fa-mobile"></i>9361881941</a>
+                 </div>
+                    <div class="social">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="inputbox">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="name" class="name" placeholder="Your Name">
+            <input type="text" name="gmail" class="email" placeholder="G-mail">
+       <textarea name="message" id=""  placeholder="your message" class="mess"></textarea>
+       <button type="submit">Submit</button>
+          </form>
+      
+            </div>
+          
+         
+        </div>
+     
+        
+    </div>
+   
+
+    <script>
+        let exp = document.getElementById("experience")
+        let exp1 = document.getElementById("exp")
+        let skill = document.getElementById("Skills")
+        let skill2 = document.getElementById("skill1")
+        let eadu = document.getElementById("education")
+        let eadu1 = document.getElementById("eadu")
+
+
+        exp1.classList.remove("active-link")
+        eadu1.classList.remove("active-link")
+
+        exp1.addEventListener("click", () => {
+            exp.style.display = "block"
+            skill.style.display = "none"
+            eadu.style.display = "none"
+            exp1.classList.add("active-link")
+            skill2.classList.remove("active-link")
+            eadu1.classList.remove("active-link")
+
+
+        })
+
+
+        skill2.addEventListener("click", () => {
+            skill.style.display = "block"
+            exp.style.display = "none"
+            eadu.style.display = "none"
+            skill2.classList.add("active-link")
+            eadu1.classList.remove("active-link")
+            exp1.classList.remove("active-link")
+
+        })
+
+        eadu1.addEventListener("click", () => {
+            eadu.style.display = "block"
+            exp.style.display = "none"
+            exp1.classList.remove("active-link")
+            eadu1.classList.add("active-link")
+            skill.style.display = "none"
+            skill2.classList.remove("active-link")
+
+        })
+
+
+
+
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwbWUwRA2Og-7FTtQba3zTsQXF2m9WP_8w7jmfzKNw82F3PPyzc_nWWmKPxh_WIuVZR/exec"
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+
+      
+    </script>
+ 
+</body>
+
+</html>
