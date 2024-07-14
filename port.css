@@ -28,16 +28,40 @@ html {
     background-position: center;
 
 }
+.header-text button{
+padding: 12px;
+background-color: #ff004f;
+cursor: pointer;
+border-radius: 6px;
+position: absolute;
+margin-top: 30px;
+
+}
+.header-text button a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
 
 .proimg {
+    position: relative;
     width: 370px;
     height: 370px;
-    background-color: #ffffff88;
+    background-color: #fff7f788;
     position: absolute;
     right: 20%;
     top: 35%;
     border-radius: 50%;
     border: 2px solid #ff004f;
+}
+
+.proimg img {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    right: -26%;
+    top: -30%;
 }
 
 .logo {
@@ -365,14 +389,16 @@ contact */
     margin-right: 20px;
     color: #ff004f;
 
+
 }
+
 
 .num a {
     margin-bottom: 20px;
 }
 
 .contact {
-    margin-top: 100px;
+    margin-top: 300px;
 }
 
 .contact h1 {
@@ -400,7 +426,7 @@ contact */
     left: -6%;
     width: 600px;
     min-height: 400px;
-    margin-top: 100px;
+    margin-top: 300px;
 }
 
 .inputbox input {
@@ -453,116 +479,232 @@ section h2 {
 }
 
 
+/* 
 
-
-@media only screen and (max-width:768px) {
-    nav ul {}
-
+@media (max-width: 767px) {
     nav {
         width: 100%;
         display: flex;
-        flex-direction: column;
-        text-align: center;
+        justify-content: flex-start;
         align-items: center;
-        justify-content: center;
-        align-content: center;
+        flex-wrap: nowrap;
+        background-color: black;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .proimg {
-        
-            width: 370px;
-            height: 370px;
-            background-color: #ffffff88;
-            position: absolute;
-           right:-34%;
-            top: 45%;
-            border-radius: 50%;
-            border: 2px solid #ff004f;
-        
-        
+    nav ul li {
+        display: block;
+        padding: 5px 7px;
+        list-style: none;
     }
-
-    .header-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 400px;
-        text-align: center;
-        margin-top: 300px;
-
-    }
-
-    #about {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .col-2 .sub-tittle {}
 
     .col-2 p {
-        width: 300px;
+        width: 100%;
+        text-align: justify;
+        
+    }
+
+    .tabs ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myproject h1 {
+        font-size: 20px;
         text-align: center;
+    }
+
+    .myproject {
+        width: 100%;
+    }
+
+
+    .proimg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .prj {
+        width: 270px;
+        height: 270px;
+        /* border: 1px solid white; */
+/* margin-right: 35px;
+        margin-top: 20px;
+        border-radius: 5px;
+        background-color: rgb(45, 45, 45);
+        transition: 0.5s ease-in-out;
+        position: relative;
+    
+    } */
+
+/* .skills ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        display: flex;
+     
+        font-size: 12px;
+        flex-wrap: wrap;
+        font-weight: 700;
+        padding: 10px;
+        border-radius: 0px 4px 0px 4px;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 1px solid white;
+        color: #ff004f;
+        
+    }
+   .header-text h1{
+    text-align: center;
+   }
+   .header-text p{
+    text-align: center;
+    font-size: 30px;
+   }
+   .proimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .myproject {
+    text-align: justify;
+}
+
+.own  {
+display:flex ;
+justify-items: center;
+
+
+}
+
+} */
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container2,
+    .inputbox form {
+        width: 90%;
+    }
+
+    .about,
+    .contact {
+        padding: 30px 0;
     }
 
     .tab {
+        flex-direction: column;
+    }
+
+    .tab p {
+        margin-bottom: 10px;
+    }
+
+    .myproject .own .prj {
+        width: 100%;
+    }
+
+    .contact .C-deatails {
+        flex-direction: column;
+    }
+
+    .proimg {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    .header-text p {
+        font-size: 18px;
+    }
+
+    .container2,
+    .inputbox form {
+        width: 100%;
+    }
+
+    .tabs ul {
         display: flex;
         flex-direction: column;
     }
 
-    .skills ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
+    .col-1 img {
+        display: none;
     }
 
-    .skills ul li {
-
-        display: flex;
-        justify-content: center;
-        margin-top: 2px;
+    .col-2 .sub-tittle {
+        font-size: 30px;
     }
 
-    .Experience p {
+    .col-2 p {
         text-align: justify;
     }
-    .col-2{
-        margin-top: 100px;
+
+    .myproject h1 {
+        font-size: 30px;
+    }
+
+    .header-text {
+
+        margin-top: 400px;
+    }
+
+    .col-2 p {
+        min-width: 200px;
+    }
+
+    .proimg img {
+        width: 250px;
+        height: 250px;
+        top: -28px;
+       right:-30px;
+
+    }
+
+    .proimg {
+
+        position: fixed;
+        left: 90px;
+
+    }
+
+    .C-deatails a {
+        font-size: 13px;
+
+    }
+
+    .contact h1 {
+        margin-bottom: 15px;
+        color: white;
+        font-size: 26px;
+    }
+
+    .header-text h1 {
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    .header-text {
+        margin-top: 500px;
+    }
+    .col-1 {
+        flex-basis: 0%;
+        display: none;
+    }
+    body{
         
     }
 
-    .col-1{
-        flex-basis: 100%;
-        margin-top: 200px;
-
-    }
-    
-.col-1 img {
-width: 100%;
-}
-.myproject .sub-tittle{
-    font-size: 30px;
-}
-.col-2 p{
-    text-align: justify;
-}
-#header {
-    width: 100%;
-    height: 100vh;
-
-    background-size: cover;
-    background-position: center;
-
-}
-nav{
-    width: 50%;
-}
-body{
-    width: 100%;
-}
-nav h1 {
-    text-align: center;
-}
 }

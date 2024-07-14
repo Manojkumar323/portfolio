@@ -7,32 +7,751 @@
     <title>Document</title>
     <link rel="stylesheet" href="port.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
- 
-   
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #080808;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Home page */
+
+#header {
+    width: 100%;
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+
+}
+.header-text button{
+padding: 12px;
+background-color: #ff004f;
+cursor: pointer;
+border-radius: 6px;
+position: absolute;
+margin-top: 30px;
+
+}
+.header-text button a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.proimg {
+    position: relative;
+    width: 370px;
+    height: 370px;
+    background-color: #fff7f788;
+    position: absolute;
+    right: 20%;
+    top: 35%;
+    border-radius: 50%;
+    border: 2px solid #ff004f;
+}
+
+.proimg img {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    right: -26%;
+    top: -30%;
+}
+
+.logo {
+    width: 140px;
+    font-size: 40px;
+}
+
+.logo span {
+    color: #ff004f;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    background-color: #ff004f;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s ease-in;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 18%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.header-text p {
+    margin-top: 12px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.header-text p span {
+    color: #ff004f;
+}
+
+
+
+
+
+
+/* about page */
+
+
+#about {
+    padding: 80px;
+    color: #ababab;
+}
+
+#about .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    flex-basis: 30%;
+}
+
+.col-1 img {
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.col-2 {
+    flex-basis: 65%;
+}
+
+.col-2 .sub-tittle {
+    font-size: 50px;
+    color: white;
+}
+
+.col-2 p {
+    margin-top: 10px;
+}
+
+.tab {
+    display: flex;
+    margin: 20px 0px 40px;
+}
+
+.tab .tab-links {
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+}
+
+.tab-links::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: #ff004f;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.skills ul {
+    display: flex;
+
+
+}
+
+.skills ul li {
+    list-style: none;
+    margin-bottom: 1px;
+    display: flex;
+    margin-right: 24px;
+    font-size: 15px;
+    flex-wrap: wrap;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 0px 4px 0px 4px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 1px solid white;
+    color: #ff004f;
+
+}
+
+.skills ul li:hover {
+    border: 1px solid #ff004f;
+    color: white;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    font-size: 20px;
+}
+
+.Experience {
+    position: relative;
+    margin-top: 30px;
+}
+
+.Experience p {
+    font-size: 23px;
+}
+
+.Experience p span {
+    color: #ff004f;
+}
+
+.highschool span {
+    color: #ff004f;
+}
+
+.highschool {
+    font-size: 20px;
+}
+
+.low-school {
+    font-size: 20px;
+}
+
+.low-school span {
+    color: #ff004f;
+}
+
+.tabs {
+    display: none;
+}
+
+.activetab {
+    display: block;
+}
+
+.Education span {
+    color: #ff004f;
+}
+
+.college {
+    border: 1px solid #ff004f;
+    padding: 15px 13px;
+    border-radius: 0px 7px 0px 7px;
+    padding: 15px 12px;
+
+}
+
+.college p {
+    font-size: 19px;
+    color: white;
+}
+
+.highschool {
+    margin-top: 10px;
+}
+
+.school {
+    margin-top: 10px;
+}
+
+/* my project */
+
+
+.myproject h1 {
+    margin-top: 70px;
+    font-size: 40px;
+    color: white;
+}
+
+.container2 {
+    margin-top: 100px;
+}
+
+.own {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+.prj {
+    width: 400px;
+    height: 350px;
+    /* border: 1px solid white; */
+    margin-right: 35px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(45, 45, 45);
+    transition: 0.5s ease-in-out;
+    position: relative;
+
+}
+
+.own .prj img {
+    width: 100%;
+    transition: 0.5s;
+
+}
+
+.own .prj img:hover {
+    transform: translateY(-10px);
+    /* transform: translateX(-30px); */
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.own .prj p {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.own .prj:hover {
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.own .prj a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* 
+contact */
+
+
+.C-deatails a {
+    text-decoration: none;
+    color: white;
+}
+
+.num {
+    display: flex;
+    flex-direction: column;
+}
+
+.num a i {
+    margin-right: 20px;
+    color: #ff004f;
+
+
+}
+
+
+.num a {
+    margin-bottom: 20px;
+}
+
+.contact {
+    margin-top: 300px;
+}
+
+.contact h1 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 45px;
+}
+
+.social {
+    margin-top: 20px;
+
+}
+
+.social a {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -6%;
+    width: 600px;
+    min-height: 400px;
+    margin-top: 300px;
+}
+
+.inputbox input {
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    background: transparent;
+    color: white;
+    border: none;
+    background-color: rgb(57, 56, 56);
+    outline: none;
+    border-radius: 5px;
+    height: 60px;
+
+}
+
+.inputbox .mess {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 160px;
+    background: transparent;
+    background-color: rgb(57, 56, 56);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.inputbox button {
+    position: relative;
+    margin-top: 50px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: #ff004f;
+    cursor: pointer;
+
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+
+/* 
+
+@media (max-width: 767px) {
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        background-color: black;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul li {
+        display: block;
+        padding: 5px 7px;
+        list-style: none;
+    }
+
+    .col-2 p {
+        width: 100%;
+        text-align: justify;
+        
+    }
+
+    .tabs ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .myproject h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .myproject {
+        width: 100%;
+    }
+
+
+    .proimg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .prj {
+        width: 270px;
+        height: 270px;
+        /* border: 1px solid white; */
+/* margin-right: 35px;
+        margin-top: 20px;
+        border-radius: 5px;
+        background-color: rgb(45, 45, 45);
+        transition: 0.5s ease-in-out;
+        position: relative;
+    
+    } */
+
+/* .skills ul li {
+        list-style: none;
+        margin-bottom: 20px;
+        display: flex;
+     
+        font-size: 12px;
+        flex-wrap: wrap;
+        font-weight: 700;
+        padding: 10px;
+        border-radius: 0px 4px 0px 4px;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 1px solid white;
+        color: #ff004f;
+        
+    }
+   .header-text h1{
+    text-align: center;
+   }
+   .header-text p{
+    text-align: center;
+    font-size: 30px;
+   }
+   .proimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .myproject {
+    text-align: justify;
+}
+
+.own  {
+display:flex ;
+justify-items: center;
+
+
+}
+
+} */
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container2,
+    .inputbox form {
+        width: 90%;
+    }
+
+    .about,
+    .contact {
+        padding: 30px 0;
+    }
+
+    .tab {
+        flex-direction: column;
+    }
+
+    .tab p {
+        margin-bottom: 10px;
+    }
+
+    .myproject .own .prj {
+        width: 100%;
+    }
+
+    .contact .C-deatails {
+        flex-direction: column;
+    }
+
+    .proimg {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    .header-text p {
+        font-size: 18px;
+    }
+
+    .container2,
+    .inputbox form {
+        width: 100%;
+    }
+
+    .tabs ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-1 img {
+        display: none;
+    }
+
+    .col-2 .sub-tittle {
+        font-size: 30px;
+    }
+
+    .col-2 p {
+        text-align: justify;
+    }
+
+    .myproject h1 {
+        font-size: 30px;
+    }
+
+    .header-text {
+
+        margin-top: 400px;
+    }
+
+    .col-2 p {
+        min-width: 200px;
+    }
+
+    .proimg img {
+        width: 250px;
+        height: 250px;
+        top: -28px;
+       right:-30px;
+
+    }
+
+    .proimg {
+
+        position: fixed;
+        left: 90px;
+
+    }
+
+    .C-deatails a {
+        font-size: 13px;
+
+    }
+
+    .contact h1 {
+        margin-bottom: 15px;
+        color: white;
+        font-size: 26px;
+    }
+
+    .header-text h1 {
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    .header-text {
+        margin-top: 500px;
+    }
+    .col-1 {
+        flex-basis: 0%;
+        display: none;
+    }
+    body{
+        
+    }
+
+}
+    </style>
+
+
 </head>
 
 <body>
 
     <!-- home page -->
+    <nav class="container" data-aos="fade-down-left" data-aos-delay="300" data-aos-duration="1000"
+        data-aos-easing="ease-in-out">
+        <h1 class="logo"><span>M</span>anoj</h1>
+
+
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contacts">Contact</a></li>
+        </ul>
+    </nav>
     <div id="header">
-        <div data-aos="fade-right" class="container">
-            <nav>
-                <h1 class="logo"><span>M</span>anoj</h1>
-                
-               
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contacts">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-text" >
+        <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" data-aos-easing="ease-in-out"
+            class="container">
+
+            <div class="header-text">
                 <h1>Web Developer</h1>
                 <p> Hi , I'M <span>Manoj Kumar</span> <br> From Tirupur <br> Tamil Nadu</p>
+                <button><a href="Manoj CV.pdf" download=""> Dowload CV</a></button>
             </div>
             <div class="proimg">
-
+                <img src="port.png" alt="">
             </div>
         </div>
     </div>
@@ -40,18 +759,22 @@
 
     <!-- About page -->
 
-    <div id="about">
+    <div id="about" data-aos="zoom-in" data-aos-duration="2000" data-aos-easing="ease-in-out">
         <div class="row">
             <div class="col-1">
                 <img src="images/MERN (1).png " alt="">
             </div>
             <div class="col-2">
                 <h1 class="sub-tittle">About Me</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellat similique nobis iusto
-                    illo eos,
-                    soluta consequatur fugit dolorem quae dignissimos accusamus maiores quos doloremque dolore ducimus,
-                    facilis
-                    debitis blanditiis.</p>
+                <p>I am <span style="color: #ff004f;"> Manoj Kumar</span> , a dedicated and passionate web developer
+                    with a background in Business
+                    Administration and Computer Applications (BBA in CA). My journey into web development began
+                    during my undergraduate studies, where I discovered a profound interest in creating dynamic and
+                    user-friendly websites. <br> <br>
+                    After completing my BBA(CA), I embarked on a six-month intensive course to master the MERN stack
+                    (MongoDB, Express.js, React.js, Node.js). This experience equipped me with a comprehensive
+                    understanding of full-stack development and enabled me to build robust, scalable web applications.
+                </p>
 
                 <div class="tab">
                     <p class="tab-links  active-link" id="skill1">Skill</p>
@@ -74,10 +797,10 @@
 
                 </div>
                 <div class="Experience  tabs" id="experience">
-                    <p>I complete <span>Full Stack Web Development</span> course complete then   <br>
+                    <p>I complete <span>Full Stack Web Development</span> course complete then <br>
                         the I create food delivery website </p>
                 </div>
-                <div class="Education tabs" id="education">
+                <div class="Education tabs " id="education">
                     <div class="college">
                         <p>Parks College College Arts and Science Tirupur</p>
                         <span>BBA(Computer Application)</span>
@@ -100,45 +823,46 @@
                 <div class="myproject">
                     <h1 class="sub-tittle">My Recend project</h1>
 
-                  <div class="own">
-                    <div class="prj box1" >
-                        <img src="Screenshot (4).png" alt="">
-                        <p>I Create a Movie Website Using HTML  CSS  JAVASCRIPT </p>
-                        <a href="https://manojkumar323.github.io/kollywwod/" target="_blank">Visit Site</a>
+                    <div class="own" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
+                        <div class="prj box1">
+                            <img src="Screenshot (4).png" alt="">
+                            <p>I Create a Movie Website Using HTML CSS JAVASCRIPT </p>
+                            <a href="https://manojkumar323.github.io/kollywwod/" target="_blank">Visit Site</a>
+                        </div>
+                        <div class="prj box2">
+                            <img src="Screenshot (5).png" alt="">
+                            <p>Dgital clock in JavaScript </p>
+                            <a href="http://127.0.0.1:5501/dgital%20clock.html" target="_blank">Visit Site</a>
+                        </div>
+                        <div class="prj box3">
+                            <img src="" alt="">
+                            <a href=""></a>
+                        </div>
+                        <div class="prj box4">
+                            <img src="" alt="">
+                            <a href=""></a>
+                        </div>
+                        <div class="prj box5">
+                            <img src="" alt="">
+                            <a href=""></a>
+                        </div>
+                        <div class="prj box6">
+                            <img src="" alt="">
+                            <a href=""></a>
+                        </div>
                     </div>
-                    <div class="prj box2">
-                        <img src="Screenshot (5).png" alt="">
-                        <p>Dgital clock in JavaScript   </p>
-                        <a href="http://127.0.0.1:5501/dgital%20clock.html" target="_blank">Visit Site</a>
-                    </div>
-                    <div class="prj box3">
-                        <img src="" alt="">
-                        <a href=""></a>
-                    </div>
-                    <div class="prj box4">
-                        <img src="" alt="">
-                        <a href=""></a>
-                    </div>
-                    <div class="prj box5">
-                        <img src="" alt="">
-                        <a href=""></a>
-                    </div>
-                    <div class="prj box6">
-                        <img src="" alt="">
-                        <a href=""></a>
-                    </div>
-                  </div>
                 </div>
-                
+
             </div>
 
-            <div class="contact" id="contacts">
+            <div class="contact" id="contacts" data-aos="fade-down-right" data-aos-duration="1000" data-aos-easing="ease-in-out" >
                 <h1 class="sub-tittle">Contact</h1>
                 <div class="C-deatails">
-                 <div class="num">
-                    <a href=""><i class="fa-regular fa-paper-plane"></i>Manojkumar850876@gmail.com</a>
-                    <a href=""><i class="fa-solid fa-mobile"></i>9361881941</a>
-                 </div>
+                    <div class="num">
+                        <a href=""><i class="fa-regular fa-paper-plane"></i>Manojkumar850876@gmail.com</a>
+                        <a href=""><i class="fa-solid fa-mobile"></i>9361881941</a>
+                    </div>
                     <div class="social">
                         <a href=""><i class="fa-brands fa-facebook"></i></a>
                         <a href=""><i class="fa-brands fa-twitter"></i></a>
@@ -150,22 +874,39 @@
                 </div>
             </div>
 
-            <div class="inputbox">
-          <form name="submit-to-google-sheet">
-            <input type="text" name="name" class="name" placeholder="Your Name">
-            <input type="text" name="gmail" class="email" placeholder="G-mail">
-       <textarea name="message" id=""  placeholder="your message" class="mess"></textarea>
-       <button type="submit">Submit</button>
-          </form>
-      
+            <!-- <div class="inputbox" data-aos="fade-down-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <form name="submit-to-google-sheet" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="e8f7aab3-60f8-4498-924e-b76254ff5543">
+                    <input type="text" name="name" class="name" placeholder="Your Name">
+                    <input type="text" name="gmail" class="email" placeholder="G-mail">
+                    <textarea name="message" id="" placeholder="your message" class="mess"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+
+            </div> -->
+            <div class="inputbox" data-aos="fade-down-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <form id="contactForm" name="submit-to-google-sheet" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="e8f7aab3-60f8-4498-924e-b76254ff5543">
+                    
+                    <label for="name">Your Name</label> 
+                    <input type="text" id="name" name="name" class="name" placeholder="Your Name" required>
+                    <br><br>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="email" placeholder="Your Email" required>
+                    <br> <br>
+                    <label for="message">Your Message</label>
+                    <textarea name="message" id="message" placeholder="Your message" class="mess" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
             </div>
-          
-         
+
+
         </div>
-     
-        
+
+
     </div>
-   
+
 
     <script>
         let exp = document.getElementById("experience")
@@ -214,19 +955,40 @@
 
 
 
-        const scriptURL = "https://script.google.com/macros/s/AKfycbwbWUwRA2Og-7FTtQba3zTsQXF2m9WP_8w7jmfzKNw82F3PPyzc_nWWmKPxh_WIuVZR/exec"
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const formData = new FormData(this);
+        for (const [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+        }
+        // Proceed with form submission after logging
+        fetch(this.action, {
+            method: this.method,
+            body: formData,
         })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            if (data.success) {
+                alert('Form submitted successfully!');
+            } else {
+                alert('There was an error submitting the form. Please try again.');
+            }
+            // handle success, e.g., show a thank you message
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // handle error, e.g., show an error message
+        });
+    });
 
-      
+
     </script>
- 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>
