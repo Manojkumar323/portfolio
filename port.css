@@ -588,6 +588,14 @@ justify-items: center;
     .container {
         flex-direction: column;
     }
+    .tabs ul {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .tabs ul li{
+        margin-top:10px ;
+    }
 
     .container2,
     .inputbox form {
@@ -618,6 +626,26 @@ justify-items: center;
     .proimg {
         width: 200px;
         height: 200px;
+        top: 50px;
+        right:30%;
+    }
+    .col-1 {
+        flex-basis: 0%;
+        display: none;
+    }
+    .proimg img {
+        width: 250px;
+        height: 250px;
+        top: -28px;
+       right:-30px;
+
+    }
+    .header-text {
+        margin-top: 300px;
+    }
+    .col-2 p {
+        min-width: 300px;
+        text-align: justify;
     }
 }
 
@@ -697,14 +725,15 @@ justify-items: center;
     }
 
     .header-text {
-        margin-top: 500px;
+        margin-top: 300px;
     }
     .col-1 {
         flex-basis: 0%;
         display: none;
     }
-    body{
-        
-    }
+   
 
 }
+
+   
+    
